@@ -97,4 +97,8 @@ document.getElementById('sho-btn').addEventListener('click', function (e) {
     const totalAmount = parseFloat(shoesPriceValue) / parseFloat(shoesQuantityValue);
 
     displayData(shoesTitle, shoesPriceValue, shoesQuantityValue, totalAmount, 'sho-btn');
-})
+});
+
+
+
+
