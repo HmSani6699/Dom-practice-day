@@ -31,20 +31,29 @@ function cardData(title, price, quantity) {
 }
 
 document.getElementById('first-card-btn').addEventListener('click', function () {
+    //card information
     let allCardData = cardData('bag-title', 'bag-price', 'bag-quantity');
-
+    // total price 
     const totalPrice = parseInt(allCardData[1]) * parseInt(allCardData[2]);
-
+    //show the display card details
     displayData(allCardData[0], allCardData[1], allCardData[2], totalPrice);
 });
 
 
 document.getElementById('second-card').addEventListener('click', function () {
-
+    //card information
     let allCardData = cardData('blue-bag-title', 'blue-bag-price', 'blue-bag-quantity');
-    console.log(allCardData)
-
+    // total price 
     let totalPrice = parseInt(allCardData[1]) + parseInt(allCardData[2]);
-
+    //show the display card details
     displayData(allCardData[0], allCardData[1], allCardData[2], totalPrice);
+});
+
+document.getElementById('black-button').addEventListener('click', function () {
+    //card information
+    const allCardData = cardData('black-bag-title', 'black-bag-price', 'black-bag-quantity');
+    // total price  
+    const total = parseFloat(allCardData[1]) - parseFloat(allCardData[2]);
+    //show the display card details
+    displayData(allCardData[0], allCardData[1], allCardData[2], total);
 })
