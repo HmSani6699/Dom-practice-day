@@ -71,15 +71,30 @@ document.getElementById('black-button').addEventListener('click', function () {
 document.getElementById('sho-btn').addEventListener('click', function (e) {
     // [h2.card-title, p, p, p, div.card-actions.justify-end]
     const shoesTitle = e.target.parentNode.parentNode.children[0].innerText;
-    const shoesPrice = e.target.parentNode.parentNode.children[2].children[0].value;
-    const shoesQuantity = e.target.parentNode.parentNode.children[3].children[0].value;
-    if (shoesPrice == '' || shoesQuantity == '') {
-        return alert('please enter your number')
+    const shoesPrice = e.target.parentNode.parentNode.children[2].children[0];
+    const shoesPriceValue = shoesPrice.value;
+    const shoesQuantity = e.target.parentNode.parentNode.children[3].children[0];
+    const shoesQuantityValue = shoesQuantity.value
+
+    if (shoesPrice.value == '' || shoesQuantity.value == '' || isNaN(shoesPriceValue) || isNaN(shoesQuantityValue)) {
+
+        shoesPrice.style.color = 'red';
+        shoesPrice.style.border = '2px solid red';
+        shoesQuantity.style.color = 'red';
+        shoesQuantity.style.border = '2px solid red';
+
+        return
     }
-    else if (shoesQuantity < 0 || shoesPrice < 0 || shoesPrice < shoesQuantity) {
+    else {
+        shoesPrice.style.color = 'black';
+        shoesPrice.style.border = '1px solid #e5e7eb';
+        shoesQuantity.style.color = 'black';
+        shoesQuantity.style.border = '1px solid #e5e7eb';
+    }
+    if (shoesQuantityValue < 0 || shoesPriceValue < 0 || shoesPriceValue < shoesQuantityValue) {
         return alert('please enter your positive number')
     }
-    const totalAmount = parseFloat(shoesPrice) / parseFloat(shoesQuantity);
+    const totalAmount = parseFloat(shoesPriceValue) / parseFloat(shoesQuantityValue);
 
-    displayData(shoesTitle, shoesPrice, shoesQuantity, totalAmount, 'sho-btn');
+    displayData(shoesTitle, shoesPriceValue, shoesQuantityValue, totalAmount, 'sho-btn');
 })
