@@ -11,10 +11,173 @@
 
     <!-- css link -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- daisy ui -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+        rel="stylesheet" type="text/css" />
+    <script
+        src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <h1>Simple card website</h1>
+    <header>
+        <h1 class="text-6xl text-center mt-8">
+            Sample
+            cad website
+        </h1>
+    </header>
+    <main>
+        <section
+            class=" mx-12 grid lg:grid-cols-2 mt-12">
+            <div
+                class="grid lg:grid-cols-3 gap-4 w-[900px]">
+                <div
+                    class="card card-compact w-full  bg-base-100 shadow-xl">
+                    <figure><img
+                            src="images/bag-1.png"
+                            alt="Shoes"
+                            class="" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            Red bag</h2>
+                        <p>If a dog chews shoes
+                            whose shoes does he
+                            choose?</p>
+                        <p>price:$<span>100</span>
+                        </p>
+                        <p>Quantity:<span>5</span>
+                        </p>
+
+                        <div
+                            class="card-actions justify-end">
+                            <button
+                                class="btn btn-primary">Buy
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="card card-compact w-full  bg-base-100 shadow-xl">
+                    <figure><img
+                            src="images/bag-2.png"
+                            alt="Shoes"
+                            class="" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            Blue bag</h2>
+                        <p>If a dog chews shoes
+                            whose shoes does he
+                            choose?</p>
+                        <p>price:$<span>200</span>
+                        </p>
+                        <p>Quantity:<span>10</span>
+                        </p>
+                        <div
+                            class="card-actions justify-end">
+                            <button
+                                class="btn btn-primary">Buy
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="card card-compact w-full  bg-base-100 shadow-xl">
+                    <figure><img
+                            src="images/bag-3.png"
+                            alt="Shoes"
+                            class="" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            Black bag</h2>
+                        <p>If a dog chews shoes
+                            whose shoes does he
+                            choose?</p>
+                        <p>price:$<span>100</span>
+                        </p>
+                        <p>Quantity:<span>5</span>
+                        </p>
+                        <div
+                            class="card-actions justify-end">
+                            <button
+                                class="btn btn-primary">Buy
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="card card-compact w-full  bg-base-100 shadow-xl">
+                    <figure><img
+                            src="images/shoe-1.png"
+                            alt="Shoes"
+                            class="" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            Red bag</h2>
+                        <p>If a dog chews shoes
+                            whose shoes does he
+                            choose?</p>
+                        <p><input type="text"
+                                placeholder="Type here"
+                                class="input input-bordered w-full max-w-xs" />
+                        </p>
+                        <p><input type="text"
+                                placeholder="Type here"
+                                class="input input-bordered w-full max-w-xs" /></span>
+                        </p>
+                        <div
+                            class="card-actions justify-end">
+                            <button
+                                class="btn btn-primary">Buy
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ml-[150px]">
+                <h2
+                    class="text-4xl mb-3 text-center">
+                    Total
+                    Product
+                </h2>
+                <div>
+                    <table
+                        class="table table-zebra w-full">
+                        <!-- head -->
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                                <th>1</th>
+                                <td>Cy Ganderton
+                                </td>
+                                <td>Quality
+                                </td>
+                                <td>Blue</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2
+                        class="text-3xl mt-8 text-center font-semibold">
+                        Total
+                        price:</h2>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- javascript -->
     <script src="js/card.js"></script>
